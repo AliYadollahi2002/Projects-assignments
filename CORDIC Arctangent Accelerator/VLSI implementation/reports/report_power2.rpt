@@ -1,0 +1,53 @@
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : CORDIC_ip
+Version: L-2016.03-SP1
+Date   : Thu Feb  6 13:17:12 2025
+****************************************
+
+
+Library(s) Used:
+
+    tcbn65lplt_ccs (File: /tech2/tsmc65lp_lib/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn65lp_200a/tcbn65lplt_ccs.db)
+
+
+Operating Conditions: LTCOM   Library: tcbn65lplt_ccs
+Wire Load Model Mode: segmented
+
+Design        Wire Load Model            Library
+------------------------------------------------
+CORDIC_ip              ZeroWireload      tcbn65lplt_ccs
+
+
+Global Operating Voltage = 1.32 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+  Cell Internal Power  =  10.5294 mW   (80%)
+  Net Switching Power  =   2.5893 mW   (20%)
+                         ---------
+Total Dynamic Power    =  13.1187 mW  (100%)
+
+Cell Leakage Power     = 219.5875 nW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register           7.9653            0.5799           75.4189            8.5452  (  65.14%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational      2.5641            2.0095          144.1685            4.5737  (  34.86%)
+--------------------------------------------------------------------------------------------------
+Total             10.5294 mW         2.5893 mW       219.5875 nW        13.1190 mW
+1

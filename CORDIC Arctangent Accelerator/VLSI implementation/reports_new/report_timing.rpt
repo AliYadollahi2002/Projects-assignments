@@ -1,0 +1,53 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : CORDIC_ip
+Version: L-2016.03-SP1
+Date   : Sat Feb  8 03:52:37 2025
+****************************************
+
+Operating Conditions: LTCOM   Library: tcbn65lplt_ccs
+Wire Load Model Mode: segmented
+
+  Startpoint: x_reg_reg[5][8]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: y_reg_reg[6][8]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  CORDIC_ip          ZeroWireload          tcbn65lplt_ccs
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  x_reg_reg[5][8]/CP (DFQD1)             0.0000     0.0000 r
+  x_reg_reg[5][8]/Q (DFQD1)              0.1030     0.1030 f
+  U1340/ZN (NR2D0)                       0.0431     0.1461 r
+  U1349/ZN (OAI21D0)                     0.0252     0.1713 f
+  U390/ZN (AOI21D0)                      0.0409     0.2122 r
+  U389/ZN (OAI21D0)                      0.0320     0.2442 f
+  U892/ZN (XNR2D0)                       0.0524     0.2966 r
+  U891/ZN (IOA21D1)                      0.0392     0.3358 r
+  y_reg_reg[6][8]/D (DFQD2)              0.0000     0.3358 r
+  data arrival time                                 0.3358
+
+  clock clk (rise edge)                  0.3500     0.3500
+  clock network delay (ideal)            0.0000     0.3500
+  y_reg_reg[6][8]/CP (DFQD2)             0.0000     0.3500 r
+  library setup time                    -0.0141     0.3359
+  data required time                                0.3359
+  -----------------------------------------------------------
+  data required time                                0.3359
+  data arrival time                                -0.3358
+  -----------------------------------------------------------
+  slack (MET)                                       0.0002
+
+
+1

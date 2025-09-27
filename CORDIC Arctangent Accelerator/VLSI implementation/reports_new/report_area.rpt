@@ -1,0 +1,30 @@
+ 
+****************************************
+Report : area
+Design : CORDIC_ip
+Version: L-2016.03-SP1
+Date   : Sat Feb  8 03:51:28 2025
+****************************************
+
+Library(s) Used:
+
+    tcbn65lplt_ccs (File: /tech2/tsmc65lp_lib/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn65lp_200a/tcbn65lplt_ccs.db)
+
+Number of ports:                           37
+Number of nets:                          1832
+Number of cells:                         1801
+Number of combinational cells:           1608
+Number of sequential cells:               193
+Number of macros/black boxes:               0
+Number of buf/inv:                        337
+Number of references:                      48
+
+Combinational area:               3012.120059
+Buf/Inv area:                      368.640015
+Noncombinational area:            1344.240017
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                  4356.360076
+Total area:                 undefined
+1

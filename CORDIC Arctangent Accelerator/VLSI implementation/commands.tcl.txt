@@ -1,0 +1,15 @@
+analyze -library WORK -format verilog {/home/user1/env65lp/CAD_Project/src/CORDIC_element.v}
+elaborate CORDIC_element
+compile_ultra
+
+analyze -library WORK -format verilog {/home/user1/env65lp/CAD_Project/src/CORDIC_ip.v}
+elaborate CORDIC_ip
+create_clock clk -period 5
+set_input_delay -clk clkname 0 [all_inputs]
+set_output_delay -clock clk 0 [all_outputs]
+compile_ultra
+report_qor -significant_digits 4
+report_power -significant_digits 4
+write_file -format Verilog -hierarchy -output {/home/user1/env65lp/CAD_Project/src/netlist.v}
+write_sdc {/home/user1/env65lp/CAD_Project/src/sdc_file.sdc}
+write_sdf {/home/user1/env65lp/CAD_Project/src/sdf_file.sdf}
