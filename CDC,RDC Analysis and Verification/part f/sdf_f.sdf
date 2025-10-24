@@ -1,0 +1,137 @@
+(DELAYFILE
+(SDFVERSION "OVI 2.1")
+(DESIGN "my_module_f")
+(DATE "Sat Feb  8 23:54:04 2025")
+(VENDOR "tcbn65lplt_ccs")
+(PROGRAM "Synopsys Design Compiler cmos")
+(VERSION "L-2016.03-SP1")
+(DIVIDER /)
+(VOLTAGE 1.32:1.32:1.32)
+(PROCESS "LTCOM")
+(TEMPERATURE -40.00:-40.00:-40.00)
+(TIMESCALE 1ns)
+(CELL
+  (CELLTYPE "my_module_f")
+  (INSTANCE)
+  (DELAY
+    (ABSOLUTE
+    (INTERCONNECT rst1 I_0/A (0.000:0.000:0.000))
+    (INTERCONNECT I_0/Z B_1/A (0.000:0.000:0.000))
+    (INTERCONNECT rst1 B_0/A (0.000:0.000:0.000))
+    (INTERCONNECT rst1 rst_ff1_reg/preset (0.000:0.000:0.000))
+    (INTERCONNECT clk2 rst_ff1_reg/clocked_on (0.000:0.000:0.000))
+    (INTERCONNECT rst_ff1_reg/Q rst_ff2_reg/next_state (0.000:0.000:0.000))
+    (INTERCONNECT clk2 rst_ff2_reg/clocked_on (0.000:0.000:0.000))
+    (INTERCONNECT rst_ff1_reg/Q rst_ff2_reg/data_in (0.000:0.000:0.000))
+    (INTERCONNECT C30/Z_0 rst_ff2_reg/enable (0.000:0.000:0.000))
+    (INTERCONNECT rst_ff2_reg/Q rst_ff3_reg/next_state (0.000:0.000:0.000))
+    (INTERCONNECT clk2 rst_ff3_reg/clocked_on (0.000:0.000:0.000))
+    (INTERCONNECT rst_ff2_reg/Q rst_ff3_reg/data_in (0.000:0.000:0.000))
+    (INTERCONNECT C30/Z_0 rst_ff3_reg/enable (0.000:0.000:0.000))
+    (INTERCONNECT rst_ff3_reg/Q ff2_Q_reg/clear (0.000:0.000:0.000))
+    (INTERCONNECT ff1_Q_reg/Q ff2_Q_reg/next_state (0.000:0.000:0.000))
+    (INTERCONNECT clk2 ff2_Q_reg/clocked_on (0.000:0.000:0.000))
+    (INTERCONNECT rst1 ff1_Q_reg/clear (0.000:0.000:0.000))
+    (INTERCONNECT ff1_D ff1_Q_reg/next_state (0.000:0.000:0.000))
+    (INTERCONNECT clk1 ff1_Q_reg/clocked_on (0.000:0.000:0.000))
+    )
+  )
+)
+(CELL
+  (CELLTYPE "GTECH_NOT")
+  (INSTANCE I_0)
+  (DELAY
+    (ABSOLUTE
+    (IOPATH A Z (0.000:0.000:0.000))
+    )
+  )
+)
+(CELL
+  (CELLTYPE "GTECH_BUF")
+  (INSTANCE B_1)
+  (DELAY
+    (ABSOLUTE
+    (IOPATH A Z (0.000:0.000:0.000))
+    )
+  )
+)
+(CELL
+  (CELLTYPE "GTECH_BUF")
+  (INSTANCE B_0)
+  (DELAY
+    (ABSOLUTE
+    (IOPATH A Z (0.000:0.000:0.000))
+    )
+  )
+)
+(CELL
+  (CELLTYPE "\*\*SEQGEN\*\*")
+  (INSTANCE rst_ff1_reg)
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge clocked_on) Q (0.000:0.000:0.000))
+    (IOPATH data_in Q (0.000:0.000:0.000))
+    (IOPATH (posedge enable) Q (0.000:0.000:0.000))
+    (IOPATH (posedge clocked_on) QN (0.000:0.000:0.000))
+    (IOPATH data_in QN (0.000:0.000:0.000))
+    (IOPATH (posedge enable) QN (0.000:0.000:0.000))
+    )
+  )
+)
+(CELL
+  (CELLTYPE "\*\*SEQGEN\*\*")
+  (INSTANCE rst_ff2_reg)
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge clocked_on) Q (0.000:0.000:0.000))
+    (IOPATH data_in Q (0.000:0.000:0.000))
+    (IOPATH (posedge enable) Q (0.000:0.000:0.000))
+    (IOPATH (posedge clocked_on) QN (0.000:0.000:0.000))
+    (IOPATH data_in QN (0.000:0.000:0.000))
+    (IOPATH (posedge enable) QN (0.000:0.000:0.000))
+    )
+  )
+)
+(CELL
+  (CELLTYPE "\*\*SEQGEN\*\*")
+  (INSTANCE rst_ff3_reg)
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge clocked_on) Q (0.000:0.000:0.000))
+    (IOPATH data_in Q (0.000:0.000:0.000))
+    (IOPATH (posedge enable) Q (0.000:0.000:0.000))
+    (IOPATH (posedge clocked_on) QN (0.000:0.000:0.000))
+    (IOPATH data_in QN (0.000:0.000:0.000))
+    (IOPATH (posedge enable) QN (0.000:0.000:0.000))
+    )
+  )
+)
+(CELL
+  (CELLTYPE "\*\*SEQGEN\*\*")
+  (INSTANCE ff2_Q_reg)
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge clocked_on) Q (0.000:0.000:0.000))
+    (IOPATH data_in Q (0.000:0.000:0.000))
+    (IOPATH (posedge enable) Q (0.000:0.000:0.000))
+    (IOPATH (posedge clocked_on) QN (0.000:0.000:0.000))
+    (IOPATH data_in QN (0.000:0.000:0.000))
+    (IOPATH (posedge enable) QN (0.000:0.000:0.000))
+    )
+  )
+)
+(CELL
+  (CELLTYPE "\*\*SEQGEN\*\*")
+  (INSTANCE ff1_Q_reg)
+  (DELAY
+    (ABSOLUTE
+    (IOPATH (posedge clocked_on) Q (0.000:0.000:0.000))
+    (IOPATH data_in Q (0.000:0.000:0.000))
+    (IOPATH (posedge enable) Q (0.000:0.000:0.000))
+    (IOPATH (posedge clocked_on) QN (0.000:0.000:0.000))
+    (IOPATH data_in QN (0.000:0.000:0.000))
+    (IOPATH (posedge enable) QN (0.000:0.000:0.000))
+    )
+  )
+)
+)
